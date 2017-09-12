@@ -35,7 +35,6 @@ public class ResultActivity extends AppCompatActivity {
         setResult(RESULT_OK,intent);
         finish();
     }
-
     public void giaiPT(int a, int b){
         if(a==0){
             if(b==0) {

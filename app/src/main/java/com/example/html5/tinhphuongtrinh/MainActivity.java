@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         btnTinh=(Button) findViewById(R.id.btnTinh);
         edta=(EditText) findViewById(R.id.edta);
         edtb=(EditText) findViewById(R.id.edtb);
-        Intent intent = getIntent();
         btnTinh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,10 +46,11 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode==khoaxoa){
             if(resultCode==RESULT_OK){
                 Toast.makeText(MainActivity.this,
-                        "Wellcome back to MainActivity ! Your last edit text : a="+edta.getText().toString()+", b="+edtb.getText().toString()+", nghiem la: "+String.valueOf(data.getIntExtra(ResultActivity.trave,0)),
+                        "Wellcome back to MainActivity ! Your last edit text : a="+edta.getText().toString()+", b="+edtb.getText().toString()+", nghiem la: "+data.getStringExtra(ResultActivity.trave),
                         Toast.LENGTH_LONG).show();
                 edta.setText("");
                 edtb.setText("");
+
             }
         }
     }
