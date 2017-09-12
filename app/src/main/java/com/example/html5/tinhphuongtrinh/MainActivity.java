@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode==khoaxoa){
             if(resultCode==RESULT_OK){
                 Toast.makeText(MainActivity.this,
-                        "Wellcome back to MainActivity ! Your last edit text : a="+edta.getText().toString()+", b="+edtb.getText().toString()+", nghiem la: ",
+                        "Wellcome back to MainActivity ! Your last edit text : a="+edta.getText().toString()+", b="+edtb.getText().toString()+", nghiem la: "+String.valueOf(data.getIntExtra(ResultActivity.trave,0)),
                         Toast.LENGTH_LONG).show();
                 edta.setText("");
                 edtb.setText("");
